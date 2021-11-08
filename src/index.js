@@ -5,16 +5,15 @@ import configureStore from './store/store';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import App from './App';
-
+import LandingPage from './userLandingPage/landingpage';
+import ProfileListing from './userLandingPage/profileListing'
 const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
-
     <Provider store={ store }>
-      <App/>
+      <LandingPage/>
     </Provider>
-
   </React.StrictMode>,
   document.getElementById('root')
 );

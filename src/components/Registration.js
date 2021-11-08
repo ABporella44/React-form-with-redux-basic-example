@@ -20,7 +20,8 @@ class Registration extends Component{
             emailAddress:"",
             mobileNumber:"",
             pincode:"",
-            state:""
+            state:"",
+            alreadyRegistered:false
           }
            
         }
@@ -182,7 +183,8 @@ class Registration extends Component{
                       this.setState((prevState)=>({
                            profile:{
                              ...prevState.profile,
-                             city:event.target.value
+                             city:event.target.value,
+                             alreadyRegistered:true
                            }
                       }))
                     }}

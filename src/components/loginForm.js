@@ -9,28 +9,33 @@ import { Link,Redirect } from "react-router-dom";
 import { withRouter} from "react-router-dom";
 import Homepage  from '../components/homepage';
 import Registration from "./Registration";
+import { username } from "../actions/actionTypes";
 class Login extends Component {
 
    constructor(props){
      super(props);
     this.state = {
       userName:" ",
-      password:" "
+      password:" ",
+      login:false,
+      
     }
   
    }
    
 
    handleSubmit = (e)=>{
+  e.preventDefault();
     let registeredUsers = this.props.registerUsers;
-    for(let i=0;i<registeredUsers.length;i++){
-     if(this.state.userName === registeredUsers[i].userName && this.state.password === registeredUsers[i].password) 
-       {
-        this.props.history.push(`/Homepage/${this.state.userName}`);
-       }else{
-         alert("Please Register Before you Login")
-       }
-    }
+        registeredUsers.find((items,index)=>{
+          if(this.state.userName === items.userName && this.state.password === items.password) 
+          {
+              this.setState({login:true})
+              
+          }
+          console.log(this.state.login);
+    })
+    console.log(this.state.login);       
 
    }
 
@@ -48,10 +53,20 @@ class Login extends Component {
         password : e.target.value
       })
       }
+      
       render() {
-        console.log("Thes are from render",this.props);
+
         return(
-          <div className="root-class">
+          <div>
+            {
+              this.state.login ? (
+              <>
+                 { this.props.history.push(`/Homepage/${this.state.userName}`)};
+              </>):(
+              <>
+
+                 <div className="root-class">
+                   
             <Grid className="grid-class" container spacing={3}>
               <Grid item xs={4}></Grid>
                <Grid className="form-elements" item xs={4}>
@@ -85,16 +100,18 @@ class Login extends Component {
               <Grid item xs={4}></Grid>
             </Grid>
           </div>
-
-
-      )
+              </>)
+            }
+          </div>
+        )
+          }  
         }
-      }
-
-  
+          
 const mapStateToProps = (hello)=>{
    return {
      registerUsers : hello.userNewReg   
  }
 }
+
+
  export default connect(mapStateToProps)(withRouter(Login))

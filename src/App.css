@@ -2,37 +2,122 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image-div{
+  border: 20px solid white;
+  width: fit-content;
+  border-radius: 50%;
+  position: absolute;
+  top: 251px;
+  left: 89px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profileImage-class{
+  border-radius: 50%;
+  
+}
+.landing-page{
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+.landingPage-component{
+  padding: 10px;
+  height: 730px;
+}
+.paper-class{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+
+}
+.paper-class-list{
+  background-color: rgb(240, 240, 240) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+}
+.second-grid{
+  padding:15px;
+}
+.user-profile-class{
+  display: flex;
+
+}
+.user-profile-class{
+  height: 128px;
+  width: 128px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.users-listing-class{
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 600px;
+  justify-content: center;
+}
+.Icon-nametag{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-profile-class:hover{
+  transform: scale(1.1); 
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.first-grid-ofsecond{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.paper-class-two{
+  width:350px !important;
+  margin-right: 26px;
+  height: 600px;
+
+}
+.list-elements-sidenav{
+  list-style-type: none;
+  padding-left: 0px;
+  width: 100%;
+}
+li:hover{
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.side-nav-list{
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.list-item{
+ width:100%;
+ height: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.user-image-class {
+  border-radius: 50%;
+  height: 130px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid-in-secondarygrid{
+  width: 100%;
 }
