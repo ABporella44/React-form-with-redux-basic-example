@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   height: 350px;
-
+  width: 100%;
 }
 .paper-class-list{
   background-color: rgb(240, 240, 240) !important;
@@ -116,8 +116,36 @@ li:hover{
 
 .user-image-class {
   border-radius: 50%;
-  height: 130px;
+  height: 100px;
+  margin: 15px;
 }
 .grid-in-secondarygrid{
+
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-direction: row;
+  row-gap: 21px;
+
+}
+.review-text{
+  font-family: cursive;
+  font-style: italic;
+  font-size: 13px;
+}
+.user-image-div{
+  display: flex;
+  height: 200px;
+  background-color: white;
+}
+.review-elements{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 45px;
+}
+.reviewer-name{
+  font-size: 10px;
 }
