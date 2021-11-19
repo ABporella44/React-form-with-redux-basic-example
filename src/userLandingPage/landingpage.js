@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import ProfileListing from "./profileListing";
 import Sidenavigation from "./sidenavigation";
 import Userreviews from "./userReviews";
+import DisPicture from "./displayImage";
+
 
 class LandingPage extends React.Component{
      constructor(props){
@@ -17,9 +19,7 @@ class LandingPage extends React.Component{
                 <Grid classname="landingPage-component" container spacing={1}>
                 <Grid item xs={12}>
                   <Paper className="paper-class">
-                      < Typography variant="h4">
-                          A self made bla bla bla bla bla bla bla
-                      </Typography>
+                    <DisPicture/>
                   </Paper>
                 </Grid>      
                 </Grid>
